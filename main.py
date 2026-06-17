@@ -1,16 +1,49 @@
-# This is a sample Python script.
+import random
+import time
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+GREETINGS = [
+    "YOOOO WADDUP",
+    "HEY BESTIE",
+    "OH MY GOSH HI",
+    "AYYYY IT'S",
+    "WELL WELL WELL, IF IT ISN'T",
+    "*GASP* OMG IT'S",
+    "BROOOO IT'S",
+]
+
+REACTIONS = [
+    "how are you doing on this FINE day",
+    "you look absolutely SWAGGY today",
+    "did you eat breakfast? because you SHOULD have",
+    "I was JUST thinking about you (I wasn't)",
+    "you are literally my favorite person (don't tell the others)",
+    "no way you're actually here right now",
+]
+
+FAREWELLS = [
+    "ok BYE bestie",
+    "peace out ✌️",
+    "smell ya later",
+    "don't forget to hydrate",
+    "go touch some grass (lovingly)",
+]
 
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-#3==D
+    greeting = random.choice(GREETINGS)
+    reaction = random.choice(REACTIONS)
+    farewell = random.choice(FAREWELLS)
 
-# Press the green button in the gutter to run the script.
+    print(f"\n{'='*40}")
+    print(f"  {greeting} {name.upper()}!!!")
+    print(f"{'='*40}")
+
+    time.sleep(0.3)
+    print(f"\n  ...and {reaction} 🤔")
+
+    time.sleep(0.3)
+    print(f"\n  anyway... {farewell}\n")
+
+
 if __name__ == '__main__':
     print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
